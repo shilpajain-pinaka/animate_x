@@ -1,0 +1,29 @@
+name: animate_x
+description: >
+  One Flutter SDK for 58+ ready-made animations. Wrap any widget
+  (Text, Image, ListView items, Container, anything) in AnimateX,
+  pass an animation name, and it plays. Includes staggered list
+  animations, swipe, and drag & drop helpers.
+version: 1.0.0
+#homepage: https://example.com/animate_x
+#repository: https://github.com/your-org/animate_x
+
+topics:
+  - animation
+  - ui
+  - widgets
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
