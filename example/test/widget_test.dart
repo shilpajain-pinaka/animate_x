@@ -21,6 +21,12 @@ void main() {
     // The app bar title and the animated welcome text should both be present.
     expect(find.text('animate_x'), findsOneWidget);
     expect(find.text('Welcome!'), findsOneWidget);
+
+    // Pump past every staggered/delayed start so no Future.delayed timers
+    // are left pending when the widget tree is torn down.
+    for (var i = 0; i < 20; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
   });
 }
 
@@ -42,6 +48,9 @@ class _FakeImageHttpOverrides extends HttpOverrides {
 }
 
 class _FakeHttpClient implements HttpClient {
+  @override
+  bool autoUncompress = true;
+
   @override
   Future<HttpClientRequest> getUrl(Uri url) async => _FakeHttpClientRequest();
 
