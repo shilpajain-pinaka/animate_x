@@ -5,8 +5,8 @@ description: >
   pass an animation name, and it plays. Includes staggered list
   animations, swipe, and drag & drop helpers.
 version: 1.0.0
-#homepage: https://example.com/animate_x
-#repository: https://github.com/your-org/animate_x
+homepage: https://github.com/shilpajain-pinaka/animate_x
+repository: https://github.com/shilpajain-pinaka/animate_x
 
 topics:
   - animation
